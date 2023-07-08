@@ -51,7 +51,7 @@ em {
 }
 
 .card {
-    box-shadow: 5px 20px 20px rgba(211, 211, 211, 0.3);
+    box-shadow: 2px 2px 2px rgba(211, 211, 211, 0.384);
     border: 1px solid rgba(211, 211, 211, 0.384);
     border-radius: 8px;
     height: 230px;
@@ -60,7 +60,8 @@ em {
 
 .card:hover {
     transition: .5s ease-in;
-    box-shadow: 5px 20px 60px rgba(211, 211, 211, 0.519);
+    transform: scale(1.01);
+    box-shadow: 10px 10px 10px rgba(211, 211, 211, 0.519);
 }
 
 .card .card-image {

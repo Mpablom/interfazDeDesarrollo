@@ -66,7 +66,7 @@ const botonComprar = () =>{
     botnComprar.addEventListener('click', (event)=>{
         swal({
             title: "¿Confirmar la compra?",
-            text: "Usted está por comprar: " + nombresProductos()+"por un total de: $"+preciosProductos(),
+            text: "Usted está por comprar: " + nombresProductos()+" por un total de: $"+preciosProductos(),
             icon: "warning",
             buttons: true,
             dangerMode: true,

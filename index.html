@@ -16,6 +16,29 @@
         </div>
         <h1>Ventadefrutas.com</h1>
         <p>Tu tienda saludable, dulce, y natural.</p>
+        <button id="changeColorButton" style="background: transparent;height: 50px;width: 50px;font-size: 70px;border-color: transparent;display: flex;margin-left: 45%;">🌔</button>
+        <script>
+            let changeColorButton = document.getElementById("changeColorButton");
+
+            let darkModeEnabled = false;
+        
+            const toggleDarkMode= () => {
+
+              let htmlTag = document.getElementsByTagName("html")[0];
+              
+              if (darkModeEnabled) {
+                htmlTag.style.colorScheme = "light";
+                changeColorButton.textContent = "🌔";
+              } else {
+                htmlTag.style.colorScheme = "dark";
+                changeColorButton.textContent = "☀️";
+              }
+
+              darkModeEnabled = !darkModeEnabled;
+            };
+
+            changeColorButton.addEventListener("click", toggleDarkMode);
+        </script>
         <hr>
     </header>
     <main>
