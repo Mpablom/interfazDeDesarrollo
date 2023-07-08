@@ -11,7 +11,9 @@ const agregarAlCarrito = (frutaId) =>{
 const almacenarCarrito = (carritoFrutas) =>{
     if(carritoFrutas && carritoFrutas.length > 0){
         localStorage.carritoFrutas = JSON.stringify(carritoFrutas);
-    }
+    }else {
+        localStorage.removeItem('carritoFrutas');
+      }
 };
 const recuperarCarrito = ()=>{
     let carritoFrutas= JSON.parse(localStorage.getItem('carritoFrutas')) || [];

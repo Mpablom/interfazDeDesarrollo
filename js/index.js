@@ -1,3 +1,15 @@
+const productos = [];
+const url="./productos.json";
+function obtenerProductos(){
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        productos.push(...data);
+        cargarProductos(productos);
+    })
+    .catch(err => console.error(err));
+    return productos;
+};
 const retornarCardsHtml = (producto) => {
     return `
     <div class="card">
@@ -29,6 +41,6 @@ const activarClickEnBotones = () =>{
     }
 };
 const main = () =>{
-    cargarProductos(productos);
+    obtenerProductos()
 };
 main();

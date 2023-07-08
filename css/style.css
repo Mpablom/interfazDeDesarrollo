@@ -167,7 +167,14 @@ em {
     padding: 20px;
     width: 80%;
 }
-
+.btn_quit{
+    background: transparent !important;
+    border: none;
+    transition: all .4s ease-out;
+}
+.btn_quit:hover{
+    transform: scale(1.5);
+}
 thead tr {
     background-color: darkmagenta;
     color: white;
@@ -192,6 +199,10 @@ tbody tr:nth-child(even) {
 
 #btnComprar:active {
     background-color: black;
+}
+.swal-button{
+ height: 100%;
+ border-radius: 50px;           
 }
 
 /*  CONTROLO MEDIA SCREENS Y ELEMENTOS EN PANTALLA
