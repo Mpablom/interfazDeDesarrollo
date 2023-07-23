@@ -1,4 +1,6 @@
-const productos = [];
+import { agregarAlCarrito } from "./carrito.js";
+
+export const productos = [];
 const url="./productos.json";
 function obtenerProductos(){
     fetch(url)
@@ -23,10 +25,12 @@ const retornarCardsHtml = (producto) => {
 };
 const cargarProductos = (array) => {
     const container = document.querySelector('.container');
-    array.forEach((producto) => {
-        const productsCards = retornarCardsHtml(producto);
-        container.innerHTML += productsCards;
-    });
+    if(container!=null){
+        array.forEach((producto) => {
+            const productsCards = retornarCardsHtml(producto);
+            container.innerHTML += productsCards;
+        });
+    }
     activarClickEnBotones();
 };
 const activarClickEnBotones = () =>{

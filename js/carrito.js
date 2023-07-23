@@ -1,5 +1,6 @@
+import { productos } from "./index.js";
 
-const agregarAlCarrito = (frutaId) =>{
+export const agregarAlCarrito = (frutaId) =>{
     if(frutaId > 0){
         const busqueda = productos.find(producto => producto.id === frutaId);
         if(busqueda != undefined){
@@ -8,7 +9,7 @@ const agregarAlCarrito = (frutaId) =>{
         }
     }
 };
-const almacenarCarrito = (carritoFrutas) =>{
+export const almacenarCarrito = (carritoFrutas) =>{
     if(carritoFrutas && carritoFrutas.length > 0){
         localStorage.carritoFrutas = JSON.stringify(carritoFrutas);
     }else {
@@ -19,4 +20,4 @@ const recuperarCarrito = ()=>{
     let carritoFrutas= JSON.parse(localStorage.getItem('carritoFrutas')) || [];
     return carritoFrutas;
 }
-const carritoFrutas = recuperarCarrito();
+export const carritoFrutas = recuperarCarrito();
